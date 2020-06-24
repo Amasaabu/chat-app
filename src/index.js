@@ -11,7 +11,7 @@ const server = http.createServer(app)
 const io = socketio(server)  //making use of the created server
 
 
-const port = process.env.PORT || 3000
+const port = 3000 || process.env.PORT
 const publicpath = path.join(__dirname, '../public')
 
 app.use(express.static(publicpath))
